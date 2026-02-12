@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e2b5346bf247a961e3d1",
   "position": {
-    "x": 546.66666666666674,
-    "y": 1590,
+    "x": 651.42857142857144,
+    "y": 74.285714285714292,
     "z": 12000,
-    "height": 478.33333333333337,
-    "width": 1393.3333333333335,
+    "height": 280,
+    "width": 628.57142857142856,
     "tabOrder": 10000
   },
   "visual": {
@@ -23,12 +23,13 @@
                       "Entity": "hotel_booking"
                     }
                   },
-                  "Property": "Booking_channel"
+                  "Property": "Arrival Week Start"
                 }
               },
-              "queryRef": "hotel_booking.Booking_channel",
-              "nativeQueryRef": "Booking_channel",
-              "active": true
+              "queryRef": "hotel_booking.Arrival Week Start",
+              "nativeQueryRef": "Arrival Week Start",
+              "active": true,
+              "displayName": "Arrival Week Start"
             },
             {
               "field": {
@@ -38,30 +39,28 @@
                       "Entity": "hotel_booking"
                     }
                   },
-                  "Property": "arrival_date_week_number"
+                  "Property": "Booking_channel"
                 }
               },
-              "queryRef": "hotel_booking.arrival_date_week_number",
-              "nativeQueryRef": "arrival_date_week_number",
+              "queryRef": "hotel_booking.Booking_channel",
+              "nativeQueryRef": "Booking_channel",
               "active": true
             }
-          ]
-        },
-        "Series": {
-          "projections": [
+          ],
+          "fieldParameters": [
             {
-              "field": {
+              "parameterExpr": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "hotel_booking"
+                      "Entity": "Trend"
                     }
                   },
-                  "Property": "Guest Type"
+                  "Property": "Trend"
                 }
               },
-              "queryRef": "hotel_booking.Guest Type",
-              "nativeQueryRef": "Guest Type"
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -99,7 +98,7 @@
                     "Entity": "hotel_booking"
                   }
                 },
-                "Property": "Booking_channel"
+                "Property": "Arrival Week Start"
               }
             },
             "direction": "Ascending"
@@ -112,7 +111,7 @@
                     "Entity": "hotel_booking"
                   }
                 },
-                "Property": "arrival_date_week_number"
+                "Property": "Booking_channel"
               }
             },
             "direction": "Ascending"

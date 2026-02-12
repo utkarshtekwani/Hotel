@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8158db093db5dffcbb39",
   "position": {
-    "x": 1333.3333333333335,
-    "y": 418.33333333333337,
+    "x": 181.66666666666669,
+    "y": 156.66666666666669,
     "z": 8000,
-    "height": 268.33333333333337,
-    "width": 615,
+    "height": 410,
+    "width": 386.66666666666669,
     "tabOrder": 8000
   },
   "visual": {
@@ -17,29 +17,35 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "hotel_booking"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "arrival_date"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "hotel_booking"
                     }
                   },
-                  "Level": "Month"
+                  "Property": "Arrival Month Start"
                 }
               },
-              "queryRef": "hotel_booking.arrival_date.Variation.Date Hierarchy.Month",
-              "nativeQueryRef": "arrival_date Month",
-              "active": true
+              "queryRef": "hotel_booking.Arrival Month Start",
+              "nativeQueryRef": "Arrival Month Start",
+              "active": true,
+              "displayName": "Arrival Month Start"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trend"
+                    }
+                  },
+                  "Property": "Trend"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -72,14 +78,32 @@
                       "Entity": "hotel_booking"
                     }
                   },
-                  "Property": "Daily RevPAR"
+                  "Property": "RevPAR"
                 }
               },
-              "queryRef": "hotel_booking.Daily RevPAR",
-              "nativeQueryRef": "Daily RevPAR"
+              "queryRef": "hotel_booking.RevPAR",
+              "nativeQueryRef": "RevPAR"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "hotel_booking"
+                  }
+                },
+                "Property": "Arrival Month Start"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {

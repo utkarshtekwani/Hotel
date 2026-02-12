@@ -3,13 +3,8 @@
   "name": "d93a250bb2c807157132",
   "displayName": "Daily",
   "displayOption": "ActualSize",
-  "height": 2300,
-  "width": 2300,
-  "pageBinding": {
-    "name": "625e77d8fce0af856b11",
-    "type": "Default",
-    "parameters": []
-  },
+  "height": 720,
+  "width": 1280,
   "objects": {
     "outspacePane": [
       {

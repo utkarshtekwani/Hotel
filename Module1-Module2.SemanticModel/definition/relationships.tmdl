@@ -31,3 +31,13 @@ relationship 22bec5f0-2647-3416-ecd1-4ea2ddb2e9d0
 	fromColumn: hotel_booking.hotel_id
 	toColumn: Hotel.hotel_id
 
+relationship 596bdca4-6a88-49ba-b406-026c54eb9f3b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: hotel_booking.'Arrival Week Start'
+	toColumn: LocalDateTable_454b3da9-4f5b-4a77-954e-660fb937add3.Date
+
+relationship faeee9b9-58ba-44b5-92a3-925f5a376212
+	joinOnDateBehavior: datePartOnly
+	fromColumn: hotel_booking.'Arrival Month Start'
+	toColumn: LocalDateTable_bd4935d3-504b-41e9-b3b8-5a94b9b832df.Date
+

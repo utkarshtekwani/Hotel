@@ -1,0 +1,42 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "3787e1114c90e09b3621",
+  "position": {
+    "x": 528.26367327442085,
+    "y": 200.54454263195606,
+    "z": 25,
+    "height": 206.65870551707667,
+    "width": 182.20205397659421,
+    "tabOrder": 25
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Customer"
+                    }
+                  },
+                  "Property": "country"
+                }
+              },
+              "queryRef": "Customer.country",
+              "nativeQueryRef": "country",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": []
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "2fc5bc7a2dd0ec5460a0",
   "position": {
-    "x": 546.66666666666674,
-    "y": 1596.6666666666667,
+    "x": 620,
+    "y": 88.571428571428584,
     "z": 12000,
-    "height": 478.33333333333337,
-    "width": 1393.3333333333335,
+    "height": 225.71428571428572,
+    "width": 660,
     "tabOrder": 10000
   },
   "visual": {
@@ -17,62 +17,35 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "hotel_booking"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "arrival_date"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
-                    }
-                  },
-                  "Level": "Day"
-                }
-              },
-              "queryRef": "hotel_booking.arrival_date.Variation.Date Hierarchy.Day",
-              "nativeQueryRef": "arrival_date Day",
-              "active": true
-            },
-            {
-              "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "hotel_booking"
                     }
                   },
-                  "Property": "Booking_channel"
+                  "Property": "arrival_date"
                 }
               },
-              "queryRef": "hotel_booking.Booking_channel",
-              "nativeQueryRef": "Booking_channel",
-              "active": true
+              "queryRef": "hotel_booking.arrival_date",
+              "nativeQueryRef": "arrival_date",
+              "active": true,
+              "displayName": "arrival_date"
             }
-          ]
-        },
-        "Series": {
-          "projections": [
+          ],
+          "fieldParameters": [
             {
-              "field": {
+              "parameterExpr": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "hotel_booking"
+                      "Entity": "Trend"
                     }
                   },
-                  "Property": "Guest Type"
+                  "Property": "Trend"
                 }
               },
-              "queryRef": "hotel_booking.Guest Type",
-              "nativeQueryRef": "Guest Type"
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -104,37 +77,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "hotel_booking"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "arrival_date"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
-                  }
-                },
-                "Level": "Day"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
                     "Entity": "hotel_booking"
                   }
                 },
-                "Property": "Booking_channel"
+                "Property": "arrival_date"
               }
             },
             "direction": "Ascending"

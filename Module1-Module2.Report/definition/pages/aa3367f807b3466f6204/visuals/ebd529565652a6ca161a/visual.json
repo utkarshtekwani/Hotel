@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ebd529565652a6ca161a",
   "position": {
-    "x": 25,
+    "x": 0,
     "y": 0,
     "z": 17000,
-    "height": 135,
-    "width": 1915,
+    "height": 156.66666666666669,
+    "width": 1280,
     "tabOrder": 17000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "                                                            ",
+                    "value": "                               ",
                     "textStyle": {
                       "fontFamily": "Calibri",
                       "fontSize": "40pt",
@@ -27,7 +27,7 @@
                     }
                   },
                   {
-                    "value": " SEASONAL METRICS",
+                    "value": "SEASONAL METRICS",
                     "textStyle": {
                       "fontFamily": "Constantia",
                       "fontSize": "40pt",

@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "72cc8ec7f1cb645354da",
+  "position": {
+    "x": 619.97611655123,
+    "y": 442.66539288273231,
+    "z": 19,
+    "height": 236.00668736565561,
+    "width": 346.06161929782661,
+    "tabOrder": 19
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "hotel_booking"
+                    }
+                  },
+                  "Property": "customer_type"
+                }
+              },
+              "queryRef": "hotel_booking.customer_type",
+              "nativeQueryRef": "customer_type1",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "hotel_booking"
+                        }
+                      },
+                      "Property": "adr"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(hotel_booking.adr)",
+              "nativeQueryRef": "Average of adr"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "hotel_booking"
+                      }
+                    },
+                    "Property": "adr"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

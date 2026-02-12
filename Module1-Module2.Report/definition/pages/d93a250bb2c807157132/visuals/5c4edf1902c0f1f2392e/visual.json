@@ -103,23 +103,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f092594d0168708e2ee5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "hotel_booking"
-              }
-            },
-            "Property": "reserved_room_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

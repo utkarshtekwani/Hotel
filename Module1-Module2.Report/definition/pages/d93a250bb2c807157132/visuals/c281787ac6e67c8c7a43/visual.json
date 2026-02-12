@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "c281787ac6e67c8c7a43",
   "position": {
-    "x": 533.33333333333337,
-    "y": 453.33333333333337,
+    "x": 880,
+    "y": 484,
     "z": 5000,
-    "height": 233.33333333333334,
-    "width": 755,
+    "height": 236,
+    "width": 400,
     "tabOrder": 0
   },
   "visual": {
@@ -17,29 +17,35 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "hotel_booking"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "arrival_date"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "hotel_booking"
                     }
                   },
-                  "Level": "Day"
+                  "Property": "arrival_date"
                 }
               },
-              "queryRef": "hotel_booking.arrival_date.Variation.Date Hierarchy.Day",
-              "nativeQueryRef": "arrival_date Day",
-              "active": true
+              "queryRef": "hotel_booking.arrival_date",
+              "nativeQueryRef": "arrival_date",
+              "active": true,
+              "displayName": "arrival_date"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trend"
+                    }
+                  },
+                  "Property": "Trend"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -66,24 +72,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "hotel_booking"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "arrival_date"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Entity": "hotel_booking"
                   }
                 },
-                "Level": "Day"
+                "Property": "arrival_date"
               }
             },
             "direction": "Ascending"

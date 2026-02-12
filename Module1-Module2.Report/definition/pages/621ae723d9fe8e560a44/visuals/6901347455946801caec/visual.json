@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "6901347455946801caec",
   "position": {
-    "x": 533.33333333333337,
-    "y": 453.33333333333337,
+    "x": 651.42857142857144,
+    "y": 525.71428571428578,
     "z": 5000,
-    "height": 233.33333333333334,
-    "width": 755,
+    "height": 194.28571428571431,
+    "width": 628.57142857142856,
     "tabOrder": 0
   },
   "visual": {
@@ -23,12 +23,29 @@
                       "Entity": "hotel_booking"
                     }
                   },
-                  "Property": "arrival_date_week_number"
+                  "Property": "Arrival Week Start"
                 }
               },
-              "queryRef": "hotel_booking.arrival_date_week_number",
-              "nativeQueryRef": "arrival_date_week_number",
-              "active": true
+              "queryRef": "hotel_booking.Arrival Week Start",
+              "nativeQueryRef": "Arrival Week Start",
+              "active": true,
+              "displayName": "Arrival Week Start"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Trend"
+                    }
+                  },
+                  "Property": "Trend"
+                }
+              },
+              "index": 0,
+              "length": 1
             }
           ]
         },
@@ -55,20 +72,27 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
                     "Entity": "hotel_booking"
                   }
                 },
-                "Property": "RevPAR"
+                "Property": "Arrival Week Start"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
     },
     "visualContainerObjects": {
       "dropShadow": [

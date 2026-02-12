@@ -2,8 +2,73 @@ cultureInfo en-US
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "hotel_booking.arrival_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hotel_booking",
+			          "ConceptualProperty": "arrival_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "arrival_date": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hotel_booking.arrival_month_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hotel_booking",
+			          "ConceptualProperty": "Arrival Month Start"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Arrival Month Start": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hotel_booking.arrival_week_start": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "hotel_booking",
+			          "ConceptualProperty": "Arrival Week Start"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Arrival Week Start": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
 			}
 		contentType: json
 

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0cd8f04d6a5d693c5aaa",
   "position": {
-    "x": 25,
+    "x": 0,
     "y": 0,
     "z": 17000,
-    "height": 135,
-    "width": 1915,
+    "height": 74.285714285714292,
+    "width": 1280,
     "tabOrder": 17000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "                                                            ",
+                    "value": "                                          ",
                     "textStyle": {
                       "fontFamily": "Calibri",
                       "fontSize": "40pt",
@@ -27,12 +27,31 @@
                     }
                   },
                   {
-                    "value": " WEEKLY METRICS",
+                    "value": "WEEKLY METRICS",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "28pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": "         ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "40pt",
+                      "color": "#ffffff"
+                    }
+                  },
+                  {
+                    "value": "                                                ",
                     "textStyle": {
                       "fontFamily": "Constantia",
                       "fontSize": "40pt",
                       "color": "#ffffff"
                     }
+                  },
+                  {
+                    "value": "\t\t\t  \t\t\t\t "
                   }
                 ]
               }
