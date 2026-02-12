@@ -1,0 +1,26 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-IN
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["hotel_booking","Hotel","Date","Room","Customer"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table hotel_booking
+ref table DateTableTemplate_96bebf15-74e9-4ea8-acdf-82d4ed2e3697
+ref table LocalDateTable_6b22f583-0a4c-4d48-b41b-1bb4656078ba
+ref table LocalDateTable_a6938865-b58c-4441-9bd3-f9e307a7e2bb
+ref table Hotel
+ref table Date
+ref table LocalDateTable_dfc77276-83b1-42da-8694-e410d2cedf76
+ref table Room
+ref table Customer
+
+ref cultureInfo en-US
+

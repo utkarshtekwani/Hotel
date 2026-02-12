@@ -1,0 +1,33 @@
+relationship ca25bb56-0019-4d7a-a41c-423112d20fe2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: hotel_booking.reservation_status_date
+	toColumn: LocalDateTable_6b22f583-0a4c-4d48-b41b-1bb4656078ba.Date
+
+relationship 0da5fadf-69bc-4741-ad90-a5d248080699
+	joinOnDateBehavior: datePartOnly
+	fromColumn: hotel_booking.arrival_date
+	toColumn: LocalDateTable_a6938865-b58c-4441-9bd3-f9e307a7e2bb.Date
+
+relationship ae7e5a92-d62c-45c1-a98b-36da67ca665e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Date.arrival_date
+	toColumn: LocalDateTable_dfc77276-83b1-42da-8694-e410d2cedf76.Date
+
+relationship AutoDetected_28510afe-d8db-4fe8-9955-835ecaafb799
+	fromColumn: hotel_booking.Date_key
+	toColumn: Date.Date_key
+
+relationship AutoDetected_831f46d1-f2c8-467b-b235-737cd6a3dba3
+	fromColumn: hotel_booking.'Customer.customer_id'
+	toColumn: Customer.customer_id
+
+relationship 1d1db4dd-3942-cb2d-f471-ddfa7e27d0af
+	isActive: false
+	fromColumn: hotel_booking.room_id
+	toColumn: Room.room_id
+
+relationship 22bec5f0-2647-3416-ecd1-4ea2ddb2e9d0
+	isActive: false
+	fromColumn: hotel_booking.hotel_id
+	toColumn: Hotel.hotel_id
+
