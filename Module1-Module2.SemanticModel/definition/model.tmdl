@@ -21,6 +21,9 @@ ref table Date
 ref table LocalDateTable_dfc77276-83b1-42da-8694-e410d2cedf76
 ref table Room
 ref table Customer
+ref table LocalDateTable_454b3da9-4f5b-4a77-954e-660fb937add3
+ref table LocalDateTable_bd4935d3-504b-41e9-b3b8-5a94b9b832df
+ref table Trend
 
 ref cultureInfo en-US
 

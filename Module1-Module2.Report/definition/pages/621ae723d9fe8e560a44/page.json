@@ -3,13 +3,8 @@
   "name": "621ae723d9fe8e560a44",
   "displayName": "Weekly",
   "displayOption": "ActualSize",
-  "height": 2300,
-  "width": 2300,
-  "pageBinding": {
-    "name": "4231e86918e1d3b0c7d5",
-    "type": "Default",
-    "parameters": []
-  },
+  "height": 720,
+  "width": 1280,
   "objects": {
     "outspacePane": [
       {

@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 74.4127890989776,
         "y": 0
       },
       "nodes": [
@@ -72,6 +72,16 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {},
+          "nodeIndex": "Trend",
+          "nodeLineageTag": "5c11b602-4e32-4289-a1b8-81d22d5fea34",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

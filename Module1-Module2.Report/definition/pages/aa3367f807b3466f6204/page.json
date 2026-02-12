@@ -3,13 +3,8 @@
   "name": "aa3367f807b3466f6204",
   "displayName": "Seasonal",
   "displayOption": "ActualSize",
-  "height": 2300,
-  "width": 2300,
-  "pageBinding": {
-    "name": "5b5f3078a416d7d606ee",
-    "type": "Default",
-    "parameters": []
-  },
+  "height": 720,
+  "width": 1280,
   "objects": {
     "outspacePane": [
       {

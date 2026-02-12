@@ -51,6 +51,25 @@ table hotel_booking
 		formatString: 0
 		lineageTag: 9b08cea9-c60e-4195-af3e-7da90d0425db
 
+	measure 'Total Revenue' = SUM('hotel_booking'[Revenue])
+		lineageTag: afd93bf1-d28a-4827-a2bc-3f21c6f5e254
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Cancellations' = CALCULATE([Total Bookings], 'hotel_booking'[is_canceled] = 1)
+		formatString: 0
+		lineageTag: 250837f1-4dd5-4c44-96fb-4a7f87ca022c
+
+	measure 'Cancellation %' = DIVIDE([Total Cancellations], [Total Bookings], 0)
+		lineageTag: 51670a51-7970-4295-8f21-3a9ba974f7bf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Lead Time' = AVERAGE('hotel_booking'[lead_time])
+		lineageTag: 99fd3932-b527-45d6-9873-fb41cbaab706
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column hotel
 		dataType: string
 		lineageTag: 95a8d9e3-0909-439a-9a06-5c54147ebc72
@@ -494,28 +513,90 @@ table hotel_booking
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Arrival Month Name' =
-			
-			FORMAT('hotel_booking'[arrival_date], "MMMM")
-		lineageTag: a3b42dfe-3d6b-4bff-88e3-b71c7352505e
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Arrival Day Name' =
-			
-			FORMAT('hotel_booking'[arrival_date], "dddd yyyy")
-		lineageTag: bccfb9ff-0e39-4c0a-ab2c-e4450717b0eb
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Arrival Year' = ```
-			FORMAT(hotel_booking[arrival_date], "yyyy")
+			YEAR(hotel_booking[arrival_date])
 			
 			```
-		lineageTag: ae1d3246-468a-445a-bf9b-2e15ca27116e
+		formatString: 0
+		lineageTag: 2e668b9d-99bd-42e0-b593-21700b4fe91d
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Quarter' = ```
+			"Q" & FORMAT(hotel_booking[arrival_date], "Q")
+			
+			```
+		lineageTag: 3fe6713c-1aa9-4a23-ab1c-4806af2d74ff
 		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Month' = ```
+			FORMAT(hotel_booking[arrival_date], "mmm")
+			
+			```
+		lineageTag: 2d1e6b5f-0983-42db-bc51-52211f3eadf9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Month Number' = ```
+			MONTH(hotel_booking[arrival_date])
+			
+			```
+		formatString: 0
+		lineageTag: 91286df9-9945-469f-86d5-1f4bbe375c8e
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Week' = ```
+			"W" & WEEKNUM(hotel_booking[arrival_date])
+			
+			```
+		lineageTag: b9fd7fc4-24d2-4ae2-b01e-ed35d5ebcbee
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Day Name' = ```
+			FORMAT(hotel_booking[arrival_date], "dddd")
+			
+			```
+		lineageTag: 8537cc24-c3b0-4a95-9786-788ef6a0c737
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Week Start' = ```
+			
+			hotel_booking[arrival_date] - WEEKDAY(hotel_booking[arrival_date], 2) + 1
+			
+			```
+		formatString: General Date
+		lineageTag: dbdfdfca-e9c2-43ca-9898-f530c9f04cdb
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 596bdca4-6a88-49ba-b406-026c54eb9f3b
+			defaultHierarchy: LocalDateTable_454b3da9-4f5b-4a77-954e-660fb937add3.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Arrival Month Start' = ```
+			EOMONTH(hotel_booking[arrival_date], -1) + 1
+			
+			```
+		formatString: General Date
+		lineageTag: 6295003b-5c9f-44e2-b8fc-ac441f3f5061
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: faeee9b9-58ba-44b5-92a3-925f5a376212
+			defaultHierarchy: LocalDateTable_bd4935d3-504b-41e9-b3b8-5a94b9b832df.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 

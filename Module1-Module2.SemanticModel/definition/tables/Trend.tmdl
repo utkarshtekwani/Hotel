@@ -1,0 +1,49 @@
+table Trend
+	lineageTag: 5c11b602-4e32-4289-a1b8-81d22d5fea34
+
+	column Trend
+		lineageTag: ca88165f-d594-4c15-a67a-5db63729c115
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Trend Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Trend Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trend Fields'
+		isHidden
+		lineageTag: acb7d500-1ad9-432c-a545-35911ce5b51c
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Trend Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trend Order'
+		isHidden
+		formatString: 0
+		lineageTag: f2622abd-a2eb-427e-bf34-739bd7f5857f
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Trend = calculated
+		mode: import
+		source =
+				{
+				    ("arrival_date", NAMEOF('hotel_booking'[arrival_date]), 0),
+				    ("Arrival Week Start", NAMEOF('hotel_booking'[Arrival Week Start]), 1),
+				    ("Arrival Month Start", NAMEOF('hotel_booking'[Arrival Month Start]), 2)
+				}
+
+	annotation PBI_Id = b0061ae6d6824b9f93227741b7da24f8
+
